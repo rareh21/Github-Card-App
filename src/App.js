@@ -58,6 +58,7 @@ class Form extends Component {
     event.preventDefault();
     const resp = await axios.get(`https://api.github.com/users/${this.state.userName}`);
     this.props.onSubmit(resp.data);
+    console.log(resp.data);
     this.setState({ userName: '' });
   };
   render() {
